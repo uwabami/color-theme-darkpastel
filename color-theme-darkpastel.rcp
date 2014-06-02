@@ -1,0 +1,7 @@
+(:name color-theme-darkpastel
+       :type github
+       :pkgname "uwabami/color-theme-darkpastel"
+       :description "darkbackground + pastel color font-lock for >= Emacs 23"
+       :post-init (progn
+                    (color-theme-initialize)
+                    (color-theme-darkpastel)))

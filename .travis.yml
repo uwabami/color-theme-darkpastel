@@ -1,0 +1,13 @@
+language: emacs-lisp
+cache:
+  - apt: true
+  - http: false
+env:
+  - EMACS=emacs23
+before_install:
+  - ln -s $TRAVIS_BUILD_DIR
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq $EMACS
+script:
+  - make EMACS=$EMACS
+  - make clean
