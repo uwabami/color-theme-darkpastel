@@ -26,12 +26,6 @@
 (eval-and-compile
   (require 'color-theme))
 
-(unless (display-graphic-p)
-  (progn
-    (load "term/xterm")
-    (xterm-register-default-colors)
-    (tty-set-up-initial-frame-faces)))
-
 (defvar my:l:black      "#020202")
 (defvar my:n:black      "#242424")
 (defvar my:h:black      "#4c4c4c")
