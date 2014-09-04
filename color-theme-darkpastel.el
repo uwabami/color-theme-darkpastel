@@ -6,7 +6,7 @@
 ;; URL: https://github.com/uwabami/color-theme-darkpastel
 ;; Version: 0.3
 ;; License: GPL-3+
-;; $Lastupdate: 2014-06-03 02:33:59$
+;; $Lastupdate: 2014-09-04 11:04:26$
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -25,6 +25,12 @@
 
 (eval-and-compile
   (require 'color-theme))
+
+(unless (display-graphic-p)
+  (progn
+    (load "term/xterm")
+    (xterm-register-default-colors)
+    (tty-set-up-initial-frame-faces)))
 
 (defvar my:l:black      "#020202")
 (defvar my:n:black      "#242424")
